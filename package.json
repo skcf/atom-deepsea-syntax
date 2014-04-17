@@ -1,7 +1,7 @@
 {
   "name": "deepsea",
   "theme": "syntax",
-  "version": "0.0.0",
+  "version": "0.1.1",
   "description": "DeepSea syntax theme",
   "repository": "https://github.com/skcf/atom-deepsea-syntax",
   "license": "MIT",
