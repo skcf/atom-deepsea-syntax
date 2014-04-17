@@ -1,0 +1,11 @@
+{
+  "name": "deepsea",
+  "theme": "syntax",
+  "version": "0.1.0",
+  "description": "DeepSea syntax theme",
+  "repository": "https://github.com/atom/deepsea",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  }
+}
