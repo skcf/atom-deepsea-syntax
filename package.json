@@ -1,9 +1,9 @@
 {
-  "name": "deepsea",
+  "name": "sublime--textmate--color-scheme--deep-sea",
   "theme": "syntax",
-  "version": "0.1.4",
-  "description": "DeepSea syntax theme",
-  "repository": "https://github.com/skcf/atom-deepsea-syntax",
+  "version": "0.0.0",
+  "description": "A short description of your syntax theme",
+  "repository": "https://github.com/atom/sublime--textmate--color-scheme--deep-sea",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
