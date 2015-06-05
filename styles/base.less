@@ -1,56 +1,82 @@
 @import "syntax-variables";
 
-.editor {
+@very-light-gray: #c5c8c6;
+@light-gray: #969896;
+@gray: #373b41;
+@dark-gray: #282a2e;
+@very-dark-gray: #1d1f21;
+
+@cyan: #8abeb7;
+@blue: #81a2be;
+@purple: #b294bb;
+@green: #b5bd68;
+@red: #cc6666;
+@orange: #de935f;
+@light-orange: #f0c674;
+
+
+atom-text-editor, :host {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+    color: @syntax-gutter-text-color;
+
+    .line-number {
+      &.cursor-line {
+        background-color: @syntax-gutter-background-color-selected;
+        color: @syntax-gutter-text-color-selected;
+      }
+
+      &.cursor-line-no-selection {
+        color: @syntax-gutter-text-color-selected;
+      }
+    }
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: @light-gray;
+  }
+
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    color: @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
 }
 
-.editor .gutter {
-  background-color: @syntax-gutter-background-color;
-  color: @syntax-gutter-text-color;
-}
-
-.editor .gutter .line-number.cursor-line {
-  background-color: @syntax-gutter-background-color-selected;
-  color: @syntax-gutter-text-color-selected;
-}
-
-.editor .gutter .line-number.cursor-line-no-selection {
-  color: @syntax-gutter-text-color-selected;
-}
-
-.editor .wrap-guide {
-  color: @syntax-wrap-guide-color;
-}
-
-.editor .indent-guide {
-  color: @syntax-indent-guide-color;
-}
-
-.editor .invisible-character {
-  color: @syntax-invisible-character-color;
-}
-
-.editor .search-results .marker .region {
+atom-text-editor .search-results .marker .region,
+:host .search-results .marker .region {
   background-color: transparent;
-  border: @syntax-result-marker-color;
+  border: 1px solid @syntax-result-marker-color;
 }
 
-.editor .search-results .marker.current-result .region {
-  border: @syntax-result-marker-color-selected;
+atom-text-editor .search-results .marker.current-result .region,
+:host .search-results .marker.current-result .region {
+  border: 1px solid @syntax-result-marker-color-selected;
 }
 
-.editor.is-focused .cursor {
-  border-color: @syntax-cursor-color;
-}
-
-.editor.is-focused .selection .region {
-  background-color: @syntax-selection-color;
-}
-
-.editor.is-focused .line-number.cursor-line-no-selection, .editor.is-focused .line.cursor-line {
-  background-color: #1b232c;
-}
 
 .comment {
   color: #1a5484;
